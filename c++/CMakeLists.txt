@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.4)
 project(markraken)
 
-set(CMAKE_CXX_STANDARD 11)
+# set(CMAKE_CXX_STANDARD 11)
 
-add_executable(markraken main.cpp HPC.cpp HPC.h)
+add_executable(markraken main.cpp HPC.cpp HPC.h include/FastaTools.h include/FastaTools.cpp)

@@ -138,6 +138,30 @@ HPC.cpp.s:
 	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/HPC.cpp.s
 .PHONY : HPC.cpp.s
 
+include/FastaTools.o: include/FastaTools.cpp.o
+.PHONY : include/FastaTools.o
+
+# target to build an object file
+include/FastaTools.cpp.o:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/FastaTools.cpp.o
+.PHONY : include/FastaTools.cpp.o
+
+include/FastaTools.i: include/FastaTools.cpp.i
+.PHONY : include/FastaTools.i
+
+# target to preprocess a source file
+include/FastaTools.cpp.i:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/FastaTools.cpp.i
+.PHONY : include/FastaTools.cpp.i
+
+include/FastaTools.s: include/FastaTools.cpp.s
+.PHONY : include/FastaTools.s
+
+# target to generate assembly for a file
+include/FastaTools.cpp.s:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/FastaTools.cpp.s
+.PHONY : include/FastaTools.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -174,6 +198,9 @@ help:
 	@echo "... HPC.o"
 	@echo "... HPC.i"
 	@echo "... HPC.s"
+	@echo "... include/FastaTools.o"
+	@echo "... include/FastaTools.i"
+	@echo "... include/FastaTools.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

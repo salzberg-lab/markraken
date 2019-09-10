@@ -72,9 +72,13 @@
       </Build>
       <Unit filename="/tmp/tmp.dY6zw5puj1/HPC.cpp">
       </Unit>
+      <Unit filename="/tmp/tmp.dY6zw5puj1/include/FastaTools.cpp">
+      </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/main.cpp">
       </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/HPC.h">
+      </Unit>
+      <Unit filename="/tmp/tmp.dY6zw5puj1/include/FastaTools.h">
       </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />

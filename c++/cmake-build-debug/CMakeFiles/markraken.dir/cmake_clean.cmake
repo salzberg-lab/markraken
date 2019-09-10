@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/markraken.dir/main.cpp.o"
   "CMakeFiles/markraken.dir/HPC.cpp.o"
+  "CMakeFiles/markraken.dir/include/FastaTools.cpp.o"
   "markraken.pdb"
   "markraken"
 )

@@ -6,12 +6,36 @@
 
 #IncludeRegexTransform: 
 
-/tmp/tmp.dY6zw5puj1/HPC.cpp
-HPC.h
-/tmp/tmp.dY6zw5puj1/HPC.h
-
 /tmp/tmp.dY6zw5puj1/HPC.h
 iostream
+-
+fstream
+-
+vector
+-
+include/FastaTools.h
+/tmp/tmp.dY6zw5puj1/include/FastaTools.h
+
+/tmp/tmp.dY6zw5puj1/include/FastaTools.h
+config.h
+-
+cassert
+-
+cstdlib
+-
+cstring
+-
+fstream
+-
+iostream
+-
+map
+-
+string
+-
+utility
+-
+vector
 -
 
 /tmp/tmp.dY6zw5puj1/main.cpp

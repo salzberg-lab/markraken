@@ -1,9 +1,15 @@
 //
-// Created by marku on 9/10/2019.
+//  Object to compress homopolymers of fasta file
 //
 
 #include <iostream>
 #include <fstream>
+#include <vector>
+//#include <zlib.h>
+//#include <stdio.h>
+//#include "include/kseq/kseq.hpp"
+#include "include/FastaTools.h"
+
 
 #ifndef MARKRAKEN_HPC_H
 #define MARKRAKEN_HPC_H
@@ -11,16 +17,22 @@
 
 class HPC {
 public:
-//    HPC() = default;
-    HPC(const std::string & filepath_in, const std::string & filepath_out);
+    HPC() = default;
     ~HPC() = default;
+    void read(const std::string &filepath_in);
     void compress();
+    void write(const std::string &filepath_out);
+
 
 private:
-    std::string filepath_in; // private copies of file paths
-    std::string filepath_out;
+    std::vector <std::string> taxids;
+    std::vector <std::string> seqs;
+    std::vector <std::string> infolines;
+    std::vector <std::string> seqs_compressed;
+    int n_seqs;
 
-    void homopolymer_compress(const std::string & str, std::string & compressed);
+    void homopolymer_compress(const std::string &s, std::string &s_compressed);
+
 
 };
 
