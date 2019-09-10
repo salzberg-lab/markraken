@@ -1,0 +1,1 @@
+/usr/bin/c++   -g    CMakeFiles/markmer.dir/main.cpp.o  -o markmer -rdynamic 
