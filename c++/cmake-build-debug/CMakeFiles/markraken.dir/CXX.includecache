@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/tmp/tmp.dY6zw5puj1/HPC.cpp
+HPC.h
+/tmp/tmp.dY6zw5puj1/HPC.h
+
+/tmp/tmp.dY6zw5puj1/HPC.h
+iostream
+-
+
+/tmp/tmp.dY6zw5puj1/main.cpp
+iostream
+-
+HPC.h
+/tmp/tmp.dY6zw5puj1/HPC.h
+

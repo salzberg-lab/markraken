@@ -1,24 +1,13 @@
 #include <iostream>
-using namespace std;
-
-
-string homopolymer_compress(const string & str){
-    int i = str.size();
-    string letters;
-    letters.reserve(i); // HPC sequence will always be less than or equal to size of original seq
-    for (int j=0; j<i; ++j){
-        while (str[j] == str[j+1]){
-            j++;
-        }
-        letters.push_back(str[j]);
-    }
-    return letters;
-}
+#include "HPC.h"
 
 int main() {
 //    std::cout << "Hello, World!" << std::endl;
-    string foo = "AAATTCGGGAAAA";
-    string HPC = homopolymer_compress(foo);
-//    std::cout << i
+    std::string filepath_in = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq/DB.fa";
+    std::string filepath_out = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC.fa";
+
+    HPC compressor(filepath_in, filepath_out);
+
     return 0;
+
 }
