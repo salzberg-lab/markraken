@@ -264,6 +264,8 @@ int NcbiTaxonomy::lcaHelper(int i, int j) const {
     if (i == 0 || j == 0) {
         return 0;
     }
+    std::cout << i << std::endl;
+    std::cout << j << std::endl;
     assert(i > 0);
     assert(j > 0);
     if (i == j) {
