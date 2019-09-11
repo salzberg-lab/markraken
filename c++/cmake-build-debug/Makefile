@@ -162,6 +162,30 @@ include/FastaTools.cpp.s:
 	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/FastaTools.cpp.s
 .PHONY : include/FastaTools.cpp.s
 
+include/NcbiTaxonomy.o: include/NcbiTaxonomy.cpp.o
+.PHONY : include/NcbiTaxonomy.o
+
+# target to build an object file
+include/NcbiTaxonomy.cpp.o:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o
+.PHONY : include/NcbiTaxonomy.cpp.o
+
+include/NcbiTaxonomy.i: include/NcbiTaxonomy.cpp.i
+.PHONY : include/NcbiTaxonomy.i
+
+# target to preprocess a source file
+include/NcbiTaxonomy.cpp.i:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.i
+.PHONY : include/NcbiTaxonomy.cpp.i
+
+include/NcbiTaxonomy.s: include/NcbiTaxonomy.cpp.s
+.PHONY : include/NcbiTaxonomy.s
+
+# target to generate assembly for a file
+include/NcbiTaxonomy.cpp.s:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.s
+.PHONY : include/NcbiTaxonomy.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -201,6 +225,9 @@ help:
 	@echo "... include/FastaTools.o"
 	@echo "... include/FastaTools.i"
 	@echo "... include/FastaTools.s"
+	@echo "... include/NcbiTaxonomy.o"
+	@echo "... include/NcbiTaxonomy.i"
+	@echo "... include/NcbiTaxonomy.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

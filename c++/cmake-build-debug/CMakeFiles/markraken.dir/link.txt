@@ -1,1 +1,1 @@
-/usr/bin/c++   -g    CMakeFiles/markraken.dir/main.cpp.o CMakeFiles/markraken.dir/HPC.cpp.o CMakeFiles/markraken.dir/include/FastaTools.cpp.o  -o markraken -rdynamic 
+/usr/bin/c++    -std=c++11 -g    CMakeFiles/markraken.dir/main.cpp.o CMakeFiles/markraken.dir/HPC.cpp.o CMakeFiles/markraken.dir/include/FastaTools.cpp.o CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o  -o markraken -rdynamic 

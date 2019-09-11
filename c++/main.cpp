@@ -1,5 +1,6 @@
 #include <iostream>
 #include "HPC.h"
+#include "include/NcbiTaxonomy.h"
 
 int main() {
 //    std::string filepath_in = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/DB_small.fa";

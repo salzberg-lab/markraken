@@ -8,7 +8,12 @@ CMakeFiles/markraken.dir/HPC.cpp.o
 CMakeFiles/markraken.dir/include/FastaTools.cpp.o
  /tmp/tmp.dY6zw5puj1/include/FastaTools.cpp
  /tmp/tmp.dY6zw5puj1/include/FastaTools.h
+CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o
+ /tmp/tmp.dY6zw5puj1/include/MathUtil.h
+ /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.cpp
+ /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h
 CMakeFiles/markraken.dir/main.cpp.o
  /tmp/tmp.dY6zw5puj1/HPC.h
  /tmp/tmp.dY6zw5puj1/include/FastaTools.h
+ /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h
  /tmp/tmp.dY6zw5puj1/main.cpp

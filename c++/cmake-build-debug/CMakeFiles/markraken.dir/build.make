@@ -121,11 +121,35 @@ CMakeFiles/markraken.dir/include/FastaTools.cpp.o.provides: CMakeFiles/markraken
 
 CMakeFiles/markraken.dir/include/FastaTools.cpp.o.provides.build: CMakeFiles/markraken.dir/include/FastaTools.cpp.o
 
+CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o: CMakeFiles/markraken.dir/flags.make
+CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o: ../include/NcbiTaxonomy.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /tmp/tmp.dY6zw5puj1/cmake-build-debug/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o -c /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.cpp
+
+CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.cpp > CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.i
+
+CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.cpp -o CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.s
+
+CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.requires:
+.PHONY : CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.requires
+
+CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.provides: CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.provides.build
+.PHONY : CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.provides
+
+CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.provides.build: CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o
+
 # Object files for target markraken
 markraken_OBJECTS = \
 "CMakeFiles/markraken.dir/main.cpp.o" \
 "CMakeFiles/markraken.dir/HPC.cpp.o" \
-"CMakeFiles/markraken.dir/include/FastaTools.cpp.o"
+"CMakeFiles/markraken.dir/include/FastaTools.cpp.o" \
+"CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o"
 
 # External object files for target markraken
 markraken_EXTERNAL_OBJECTS =
@@ -133,6 +157,7 @@ markraken_EXTERNAL_OBJECTS =
 markraken: CMakeFiles/markraken.dir/main.cpp.o
 markraken: CMakeFiles/markraken.dir/HPC.cpp.o
 markraken: CMakeFiles/markraken.dir/include/FastaTools.cpp.o
+markraken: CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o
 markraken: CMakeFiles/markraken.dir/build.make
 markraken: CMakeFiles/markraken.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable markraken"
@@ -145,6 +170,7 @@ CMakeFiles/markraken.dir/build: markraken
 CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/main.cpp.o.requires
 CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/HPC.cpp.o.requires
 CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/include/FastaTools.cpp.o.requires
+CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.requires
 .PHONY : CMakeFiles/markraken.dir/requires
 
 CMakeFiles/markraken.dir/clean:

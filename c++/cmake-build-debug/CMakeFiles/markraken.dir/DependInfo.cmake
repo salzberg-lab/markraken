@@ -6,6 +6,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/tmp/tmp.dY6zw5puj1/HPC.cpp" "/tmp/tmp.dY6zw5puj1/cmake-build-debug/CMakeFiles/markraken.dir/HPC.cpp.o"
   "/tmp/tmp.dY6zw5puj1/include/FastaTools.cpp" "/tmp/tmp.dY6zw5puj1/cmake-build-debug/CMakeFiles/markraken.dir/include/FastaTools.cpp.o"
+  "/tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.cpp" "/tmp/tmp.dY6zw5puj1/cmake-build-debug/CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o"
   "/tmp/tmp.dY6zw5puj1/main.cpp" "/tmp/tmp.dY6zw5puj1/cmake-build-debug/CMakeFiles/markraken.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
