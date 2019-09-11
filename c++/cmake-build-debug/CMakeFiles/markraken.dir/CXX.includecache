@@ -54,6 +54,10 @@ vector
 string
 -
 
+/tmp/tmp.dY6zw5puj1/include/smhasher/MurmurHash3.h
+stdint.h
+-
+
 /tmp/tmp.dY6zw5puj1/main.cpp
 iostream
 -
@@ -61,4 +65,6 @@ HPC.h
 /tmp/tmp.dY6zw5puj1/HPC.h
 include/NcbiTaxonomy.h
 /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h
+include/smhasher/MurmurHash3.h
+/tmp/tmp.dY6zw5puj1/include/smhasher/MurmurHash3.h
 

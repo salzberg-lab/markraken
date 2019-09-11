@@ -138,6 +138,30 @@ HPC.cpp.s:
 	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/HPC.cpp.s
 .PHONY : HPC.cpp.s
 
+hasher.o: hasher.cpp.o
+.PHONY : hasher.o
+
+# target to build an object file
+hasher.cpp.o:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/hasher.cpp.o
+.PHONY : hasher.cpp.o
+
+hasher.i: hasher.cpp.i
+.PHONY : hasher.i
+
+# target to preprocess a source file
+hasher.cpp.i:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/hasher.cpp.i
+.PHONY : hasher.cpp.i
+
+hasher.s: hasher.cpp.s
+.PHONY : hasher.s
+
+# target to generate assembly for a file
+hasher.cpp.s:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/hasher.cpp.s
+.PHONY : hasher.cpp.s
+
 include/FastaTools.o: include/FastaTools.cpp.o
 .PHONY : include/FastaTools.o
 
@@ -210,6 +234,30 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+markerizer.o: markerizer.cpp.o
+.PHONY : markerizer.o
+
+# target to build an object file
+markerizer.cpp.o:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/markerizer.cpp.o
+.PHONY : markerizer.cpp.o
+
+markerizer.i: markerizer.cpp.i
+.PHONY : markerizer.i
+
+# target to preprocess a source file
+markerizer.cpp.i:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/markerizer.cpp.i
+.PHONY : markerizer.cpp.i
+
+markerizer.s: markerizer.cpp.s
+.PHONY : markerizer.s
+
+# target to generate assembly for a file
+markerizer.cpp.s:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/markerizer.cpp.s
+.PHONY : markerizer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +270,9 @@ help:
 	@echo "... HPC.o"
 	@echo "... HPC.i"
 	@echo "... HPC.s"
+	@echo "... hasher.o"
+	@echo "... hasher.i"
+	@echo "... hasher.s"
 	@echo "... include/FastaTools.o"
 	@echo "... include/FastaTools.i"
 	@echo "... include/FastaTools.s"
@@ -231,6 +282,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... markerizer.o"
+	@echo "... markerizer.i"
+	@echo "... markerizer.s"
 .PHONY : help
 
 

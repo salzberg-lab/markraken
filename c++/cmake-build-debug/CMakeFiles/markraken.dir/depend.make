@@ -6,6 +6,9 @@ CMakeFiles/markraken.dir/HPC.cpp.o: ../HPC.h
 CMakeFiles/markraken.dir/HPC.cpp.o: ../include/FastaTools.h
 CMakeFiles/markraken.dir/HPC.cpp.o: ../include/NcbiTaxonomy.h
 
+CMakeFiles/markraken.dir/hasher.cpp.o: ../hasher.cpp
+CMakeFiles/markraken.dir/hasher.cpp.o: ../hasher.h
+
 CMakeFiles/markraken.dir/include/FastaTools.cpp.o: ../include/FastaTools.cpp
 CMakeFiles/markraken.dir/include/FastaTools.cpp.o: ../include/FastaTools.h
 
@@ -16,5 +19,9 @@ CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o: ../include/NcbiTaxonomy.h
 CMakeFiles/markraken.dir/main.cpp.o: ../HPC.h
 CMakeFiles/markraken.dir/main.cpp.o: ../include/FastaTools.h
 CMakeFiles/markraken.dir/main.cpp.o: ../include/NcbiTaxonomy.h
+CMakeFiles/markraken.dir/main.cpp.o: ../include/smhasher/MurmurHash3.h
 CMakeFiles/markraken.dir/main.cpp.o: ../main.cpp
+
+CMakeFiles/markraken.dir/markerizer.cpp.o: ../markerizer.cpp
+CMakeFiles/markraken.dir/markerizer.cpp.o: ../markerizer.h
 

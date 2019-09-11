@@ -26,10 +26,10 @@ public:
 
     void extract_miniseq_taxids();
     std::vector<TaxID> taxids;
+    std::vector <std::string> seqs;
 
 
 private:
-    std::vector <std::string> seqs;
     std::vector <std::string> infolines;
     std::vector <std::string> seqs_compressed;
     int n_seqs;

@@ -3,6 +3,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/markraken.dir/HPC.cpp.o"
   "CMakeFiles/markraken.dir/include/FastaTools.cpp.o"
   "CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o"
+  "CMakeFiles/markraken.dir/markerizer.cpp.o"
+  "CMakeFiles/markraken.dir/hasher.cpp.o"
   "markraken.pdb"
   "markraken"
 )
