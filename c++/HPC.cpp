@@ -3,6 +3,8 @@
 //
 
 #include "HPC.h"
+#include "include/NcbiTaxonomy.h"
+
 
 void HPC::read(const std::string &filepath_in) {
     FastaReader fasta_reader(filepath_in);
@@ -43,6 +45,37 @@ void HPC::write(const std::string &filepath_out) {
         current_contig.seq_ = seqs_compressed[i];
         current_contig.id_ = infolines[i];
         fasta_writer.write(current_contig);
+    }
+}
+
+const std::vector<std::string> explode(const std::string& s, const char& c)
+//http://www.cplusplus.com/articles/2wA0RXSz/
+{
+    std::string buff{""};
+    std::vector<std::string> v;
+
+    for(auto n:s)
+    {
+        if(n != c) buff+=n; else
+        if(n == c && buff != "") { v.push_back(buff); buff = ""; }
+    }
+    if(buff != "") v.push_back(buff);
+
+    return v;
+}
+
+void HPC::extract_miniseq_taxids() {
+    const char delimiter = '|';
+    for (int i=0; i<n_seqs; i++){
+        std::string &line = infolines[i];
+        std::vector<std::string> split = explode(line, delimiter);
+        std::string &id = split[2];
+        if (id.at(0) == 'x'){
+            id.erase(0, 1);
+        }
+
+        TaxID id_num = std::stoi(id);
+        taxids.push_back(id_num);
     }
 }
 

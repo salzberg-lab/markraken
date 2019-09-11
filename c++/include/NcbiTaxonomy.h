@@ -55,6 +55,8 @@ public:
     std::unordered_map<TaxID, TaxonCounts> getCladeCounts(std::unordered_map<TaxID, unsigned int>& taxonCounts) const;
 
     static NcbiTaxonomy * openTaxonomy(std::string & database);
+    bool nodeExists(TaxID taxId) const;
+
 private:
     void InitLevels();
     size_t loadNodes(const std::string &nodesFile);
@@ -63,7 +65,6 @@ private:
     void elh(std::vector< std::vector<TaxID> > const & children, int node, int level);
     void InitRangeMinimumQuery();
     int nodeId(TaxID taxId) const;
-    bool nodeExists(TaxID taxId) const;
 
     int RangeMinimumQuery(int i, int j) const;
     int lcaHelper(int i, int j) const;

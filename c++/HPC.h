@@ -9,6 +9,7 @@
 //#include <stdio.h>
 //#include "include/kseq/kseq.hpp"
 #include "include/FastaTools.h"
+#include "include/NcbiTaxonomy.h"
 
 
 #ifndef MARKRAKEN_HPC_H
@@ -23,9 +24,11 @@ public:
     void compress();
     void write(const std::string &filepath_out);
 
+    void extract_miniseq_taxids();
+    std::vector<TaxID> taxids;
+
 
 private:
-    std::vector <std::string> taxids;
     std::vector <std::string> seqs;
     std::vector <std::string> infolines;
     std::vector <std::string> seqs_compressed;

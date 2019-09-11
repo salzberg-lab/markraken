@@ -4,6 +4,7 @@
 CMakeFiles/markraken.dir/HPC.cpp.o: ../HPC.cpp
 CMakeFiles/markraken.dir/HPC.cpp.o: ../HPC.h
 CMakeFiles/markraken.dir/HPC.cpp.o: ../include/FastaTools.h
+CMakeFiles/markraken.dir/HPC.cpp.o: ../include/NcbiTaxonomy.h
 
 CMakeFiles/markraken.dir/include/FastaTools.cpp.o: ../include/FastaTools.cpp
 CMakeFiles/markraken.dir/include/FastaTools.cpp.o: ../include/FastaTools.h
