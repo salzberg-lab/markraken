@@ -167,28 +167,28 @@ CMakeFiles/markraken.dir/markerizer.cpp.o.provides: CMakeFiles/markraken.dir/mar
 
 CMakeFiles/markraken.dir/markerizer.cpp.o.provides.build: CMakeFiles/markraken.dir/markerizer.cpp.o
 
-CMakeFiles/markraken.dir/hasher.cpp.o: CMakeFiles/markraken.dir/flags.make
-CMakeFiles/markraken.dir/hasher.cpp.o: ../hasher.cpp
+CMakeFiles/markraken.dir/index.cpp.o: CMakeFiles/markraken.dir/flags.make
+CMakeFiles/markraken.dir/index.cpp.o: ../index.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /tmp/tmp.dY6zw5puj1/cmake-build-debug/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/markraken.dir/hasher.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/markraken.dir/hasher.cpp.o -c /tmp/tmp.dY6zw5puj1/hasher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/markraken.dir/index.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/markraken.dir/index.cpp.o -c /tmp/tmp.dY6zw5puj1/index.cpp
 
-CMakeFiles/markraken.dir/hasher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/markraken.dir/hasher.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /tmp/tmp.dY6zw5puj1/hasher.cpp > CMakeFiles/markraken.dir/hasher.cpp.i
+CMakeFiles/markraken.dir/index.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/markraken.dir/index.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /tmp/tmp.dY6zw5puj1/index.cpp > CMakeFiles/markraken.dir/index.cpp.i
 
-CMakeFiles/markraken.dir/hasher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/markraken.dir/hasher.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /tmp/tmp.dY6zw5puj1/hasher.cpp -o CMakeFiles/markraken.dir/hasher.cpp.s
+CMakeFiles/markraken.dir/index.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/markraken.dir/index.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /tmp/tmp.dY6zw5puj1/index.cpp -o CMakeFiles/markraken.dir/index.cpp.s
 
-CMakeFiles/markraken.dir/hasher.cpp.o.requires:
-.PHONY : CMakeFiles/markraken.dir/hasher.cpp.o.requires
+CMakeFiles/markraken.dir/index.cpp.o.requires:
+.PHONY : CMakeFiles/markraken.dir/index.cpp.o.requires
 
-CMakeFiles/markraken.dir/hasher.cpp.o.provides: CMakeFiles/markraken.dir/hasher.cpp.o.requires
-	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/hasher.cpp.o.provides.build
-.PHONY : CMakeFiles/markraken.dir/hasher.cpp.o.provides
+CMakeFiles/markraken.dir/index.cpp.o.provides: CMakeFiles/markraken.dir/index.cpp.o.requires
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/index.cpp.o.provides.build
+.PHONY : CMakeFiles/markraken.dir/index.cpp.o.provides
 
-CMakeFiles/markraken.dir/hasher.cpp.o.provides.build: CMakeFiles/markraken.dir/hasher.cpp.o
+CMakeFiles/markraken.dir/index.cpp.o.provides.build: CMakeFiles/markraken.dir/index.cpp.o
 
 # Object files for target markraken
 markraken_OBJECTS = \
@@ -197,7 +197,7 @@ markraken_OBJECTS = \
 "CMakeFiles/markraken.dir/include/FastaTools.cpp.o" \
 "CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o" \
 "CMakeFiles/markraken.dir/markerizer.cpp.o" \
-"CMakeFiles/markraken.dir/hasher.cpp.o"
+"CMakeFiles/markraken.dir/index.cpp.o"
 
 # External object files for target markraken
 markraken_EXTERNAL_OBJECTS =
@@ -207,7 +207,7 @@ markraken: CMakeFiles/markraken.dir/HPC.cpp.o
 markraken: CMakeFiles/markraken.dir/include/FastaTools.cpp.o
 markraken: CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o
 markraken: CMakeFiles/markraken.dir/markerizer.cpp.o
-markraken: CMakeFiles/markraken.dir/hasher.cpp.o
+markraken: CMakeFiles/markraken.dir/index.cpp.o
 markraken: CMakeFiles/markraken.dir/build.make
 markraken: CMakeFiles/markraken.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable markraken"
@@ -222,7 +222,7 @@ CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/HPC.cpp.o.requires
 CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/include/FastaTools.cpp.o.requires
 CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o.requires
 CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/markerizer.cpp.o.requires
-CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/hasher.cpp.o.requires
+CMakeFiles/markraken.dir/requires: CMakeFiles/markraken.dir/index.cpp.o.requires
 .PHONY : CMakeFiles/markraken.dir/requires
 
 CMakeFiles/markraken.dir/clean:

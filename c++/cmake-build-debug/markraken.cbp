@@ -72,11 +72,11 @@
       </Build>
       <Unit filename="/tmp/tmp.dY6zw5puj1/HPC.cpp">
       </Unit>
-      <Unit filename="/tmp/tmp.dY6zw5puj1/hasher.cpp">
-      </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/include/FastaTools.cpp">
       </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.cpp">
+      </Unit>
+      <Unit filename="/tmp/tmp.dY6zw5puj1/index.cpp">
       </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/main.cpp">
       </Unit>
@@ -84,11 +84,11 @@
       </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/HPC.h">
       </Unit>
-      <Unit filename="/tmp/tmp.dY6zw5puj1/hasher.h">
-      </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/include/FastaTools.h">
       </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h">
+      </Unit>
+      <Unit filename="/tmp/tmp.dY6zw5puj1/index.h">
       </Unit>
       <Unit filename="/tmp/tmp.dY6zw5puj1/markerizer.h">
       </Unit>

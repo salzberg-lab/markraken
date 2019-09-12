@@ -138,30 +138,6 @@ HPC.cpp.s:
 	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/HPC.cpp.s
 .PHONY : HPC.cpp.s
 
-hasher.o: hasher.cpp.o
-.PHONY : hasher.o
-
-# target to build an object file
-hasher.cpp.o:
-	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/hasher.cpp.o
-.PHONY : hasher.cpp.o
-
-hasher.i: hasher.cpp.i
-.PHONY : hasher.i
-
-# target to preprocess a source file
-hasher.cpp.i:
-	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/hasher.cpp.i
-.PHONY : hasher.cpp.i
-
-hasher.s: hasher.cpp.s
-.PHONY : hasher.s
-
-# target to generate assembly for a file
-hasher.cpp.s:
-	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/hasher.cpp.s
-.PHONY : hasher.cpp.s
-
 include/FastaTools.o: include/FastaTools.cpp.o
 .PHONY : include/FastaTools.o
 
@@ -209,6 +185,30 @@ include/NcbiTaxonomy.s: include/NcbiTaxonomy.cpp.s
 include/NcbiTaxonomy.cpp.s:
 	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.s
 .PHONY : include/NcbiTaxonomy.cpp.s
+
+index.o: index.cpp.o
+.PHONY : index.o
+
+# target to build an object file
+index.cpp.o:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/index.cpp.o
+.PHONY : index.cpp.o
+
+index.i: index.cpp.i
+.PHONY : index.i
+
+# target to preprocess a source file
+index.cpp.i:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/index.cpp.i
+.PHONY : index.cpp.i
+
+index.s: index.cpp.s
+.PHONY : index.s
+
+# target to generate assembly for a file
+index.cpp.s:
+	$(MAKE) -f CMakeFiles/markraken.dir/build.make CMakeFiles/markraken.dir/index.cpp.s
+.PHONY : index.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -270,15 +270,15 @@ help:
 	@echo "... HPC.o"
 	@echo "... HPC.i"
 	@echo "... HPC.s"
-	@echo "... hasher.o"
-	@echo "... hasher.i"
-	@echo "... hasher.s"
 	@echo "... include/FastaTools.o"
 	@echo "... include/FastaTools.i"
 	@echo "... include/FastaTools.s"
 	@echo "... include/NcbiTaxonomy.o"
 	@echo "... include/NcbiTaxonomy.i"
 	@echo "... include/NcbiTaxonomy.s"
+	@echo "... index.o"
+	@echo "... index.i"
+	@echo "... index.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
