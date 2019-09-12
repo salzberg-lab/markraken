@@ -3,6 +3,7 @@
 #include "HPC.h"
 #include "include/NcbiTaxonomy.h"
 #include "index.h"
+#include "markerizer.h"
 //#include "include/smhasher/MurmurHash3.h"
 //#include "include/kraken2/compact_hash.h"
 //#include <vector>
@@ -42,42 +43,47 @@ int main() {
     std::vector<std::string> &seqs = reader.seqs;
 
     // generate markers and save to file for all future use
-    int n_markers = 8000;
-    int marker_length = 10;
+    uint32_t n_markers = 8000;
+    uint32_t marker_length = 10;
+    uint32_t seed = 2019;
 
-    std::vector<std::string> markers;
-    markers.reserve(n_markers);
-    std::cout << random_string(marker_length) << std::endl;
+    markerizer M;
+    M.generate_markers(n_markers,marker_length, seed);
+
+//    std::vector<std::string> markers;
+//    markers.reserve(n_markers);
+//    std::cout << random_string(marker_length) << std::endl;
 
 
     // extract all markers from the compressed sequence
     std::vector<std::vector<uint32_t>> marker_seqs;
+
+//    marker_seqs  =
 //    std::cout << seqs[0] << std::endl;
 
 
-    // load taxonomy for LCA calculation
-    std::string names_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/names.dmp";
-    std::string nodes_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/nodes.dmp";
-    std::string merged_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/merged.dmp";
-//    std::string names_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/names.dmp";
-//    std::string nodes_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/nodes.dmp";
-//    std::string merged_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/merged.dmp";
-
-
-
-    // build index example
+//    // load taxonomy for LCA calculation
+//    std::string names_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/names.dmp";
+//    std::string nodes_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/nodes.dmp";
+//    std::string merged_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/merged.dmp";
+////    std::string names_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/names.dmp";
+////    std::string nodes_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/nodes.dmp";
+////    std::string merged_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/merged.dmp";
+//
+//
+//
+//    // build index example
 //    class index marker_index;
 //    marker_index.read_taxonomy(names_path, nodes_path, merged_path);
 //
-    uint16_t foo_1 = 8000;
-    uint16_t foo_2 = 1;
-    uint16_t foo_3 = 99;
+//    uint32_t foo_1 = 8000;
+//    uint32_t foo_2 = 1;
+//    uint32_t foo_3 = 99;
 //
 //    TaxID &id_1 = taxids[0];
 //    TaxID &id_2 = taxids[1];
-//    std::vector<TaxID> taxids;
-
-    std::vector<uint16_t> marker = {foo_1, foo_2, foo_3};
+//
+//    std::vector<uint32_t> marker = {foo_1, foo_2, foo_3};
 //
 //    marker_index.add_pair(marker, TaxID(id_1));
 //    marker_index.add_pair(marker, TaxID(id_2));
@@ -85,11 +91,10 @@ int main() {
 //    std::size_t foo = marker_index.predict_taxid(marker);
 //    std::cout << foo << std::endl;
 //    marker_index.save_index(index_path);
-
-    class index marker_index;
-    marker_index.load_index(index_path);
-    std::size_t foo = marker_index.predict_taxid(marker);
-    std::cout << foo << std::endl;
-    return 0;
-
+//
+//    class index marker_index2;
+//    marker_index2.load_index(index_path);
+//    uint32_t bar = marker_index2.predict_taxid(marker);
+//    std::cout << bar << std::endl;
+//    return 0;
 }

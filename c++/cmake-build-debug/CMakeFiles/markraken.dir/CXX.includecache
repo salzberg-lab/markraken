@@ -189,4 +189,24 @@ include/NcbiTaxonomy.h
 /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h
 index.h
 /tmp/tmp.dY6zw5puj1/index.h
+markerizer.h
+/tmp/tmp.dY6zw5puj1/markerizer.h
+
+/tmp/tmp.dY6zw5puj1/markerizer.cpp
+set
+-
+cstring
+-
+unordered_map
+-
+markerizer.h
+/tmp/tmp.dY6zw5puj1/markerizer.h
+
+/tmp/tmp.dY6zw5puj1/markerizer.h
+iostream
+-
+vector
+-
+unordered_map
+-
 

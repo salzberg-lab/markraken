@@ -4,18 +4,18 @@
 
 #include "index.h"
 
-std::size_t index::combine(std::vector<uint16_t> const &vec) {
+uint32_t index::combine(std::vector<uint32_t> const &vec) {
     //https://en.wikipedia.org/wiki/Tiny_Encryption_Algorithm
     //https://github.com/HowardHinnant/hash_append/issues/7
     std::size_t seed = vec.size();
     for(auto& i : vec) {
-        seed ^= i + 0x9E37 + (seed << 6) + (seed >> 2);
+        seed ^= i + 0x9E3779B9 + (seed << 6) + (seed >> 2);
     }
     return seed;
 }
 
-void index::add_pair(const std::vector<uint16_t> &markers, const std::size_t &taxid) {
-    const size_t singleint = combine(markers);
+void index::add_pair(const std::vector<uint32_t> &markers, const uint32_t &taxid) {
+    const uint32_t singleint = combine(markers);
     update(singleint, taxid);
 }
 
@@ -23,10 +23,10 @@ void index::reserve_space(int n_markmers) {
     markmap.reserve(n_markmers);
 }
 
-void index::update(const std::size_t &singleint, const std::size_t &taxid) {
+void index::update(const uint32_t &singleint, const uint32_t &taxid) {
     // insert if not already present
     // calculate LCA and insert if insert returns false
-    std::pair<std::unordered_map<std::size_t, std::size_t>::iterator, bool> inserter;
+    std::pair<std::unordered_map<uint32_t, uint32_t>::iterator, bool> inserter;
     inserter = markmap.insert(std::make_pair(singleint, taxid));
 
     if (!inserter.second){
@@ -39,9 +39,9 @@ void index::update(const std::size_t &singleint, const std::size_t &taxid) {
     }
 }
 
-std::size_t index::predict_taxid(const std::vector<uint16_t> &markers) {
-    const size_t singleint = combine(markers);
-    std::size_t t_p = markmap[singleint];
+uint32_t index::predict_taxid(const std::vector<uint32_t> &markers) {
+    const uint32_t singleint = combine(markers);
+    uint32_t t_p = markmap[singleint];
     return t_p;
 }
 

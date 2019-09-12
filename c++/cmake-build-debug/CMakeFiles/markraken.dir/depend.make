@@ -46,6 +46,7 @@ CMakeFiles/markraken.dir/main.cpp.o: ../include/FastaTools.h
 CMakeFiles/markraken.dir/main.cpp.o: ../include/NcbiTaxonomy.h
 CMakeFiles/markraken.dir/main.cpp.o: ../index.h
 CMakeFiles/markraken.dir/main.cpp.o: ../main.cpp
+CMakeFiles/markraken.dir/main.cpp.o: ../markerizer.h
 
 CMakeFiles/markraken.dir/markerizer.cpp.o: ../markerizer.cpp
 CMakeFiles/markraken.dir/markerizer.cpp.o: ../markerizer.h
