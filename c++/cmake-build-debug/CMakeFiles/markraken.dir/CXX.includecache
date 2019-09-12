@@ -108,10 +108,22 @@ cereal/cereal.hpp
 cereal/cereal.hpp
 ../include/cereal/types/concepts/cereal/cereal.hpp
 
+../include/cereal/types/string.hpp
+cereal/cereal.hpp
+../include/cereal/types/cereal/cereal.hpp
+string
+-
+
 ../include/cereal/types/unordered_map.hpp
 cereal/types/concepts/pair_associative_container.hpp
 ../include/cereal/types/cereal/types/concepts/pair_associative_container.hpp
 unordered_map
+-
+
+../include/cereal/types/vector.hpp
+cereal/cereal.hpp
+../include/cereal/types/cereal/cereal.hpp
+vector
 -
 
 /tmp/tmp.dY6zw5puj1/HPC.h
@@ -192,21 +204,19 @@ index.h
 markerizer.h
 /tmp/tmp.dY6zw5puj1/markerizer.h
 
-/tmp/tmp.dY6zw5puj1/markerizer.cpp
-set
--
-cstring
--
-unordered_map
--
-markerizer.h
-/tmp/tmp.dY6zw5puj1/markerizer.h
-
 /tmp/tmp.dY6zw5puj1/markerizer.h
 iostream
 -
 vector
 -
 unordered_map
+-
+cereal/archives/binary.hpp
+-
+cereal/types/vector.hpp
+-
+cereal/types/string.hpp
+-
+fstream
 -
 

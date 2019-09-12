@@ -27,6 +27,8 @@ int main() {
 //    std::string filepath_in = "/ccb/salz4-4/markus/genome_data/ecoli_MG1655/GCF_000005845.2_ASM584v2_genomic.fna";
     std::string DB_HPC_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small.fa";
     std::string index_path = "/ccb/salz4-4/markus/markraken/data/compressed/index.markmap";
+    std::string marker_path = "/ccb/salz4-4/markus/markraken/data/compressed/m.marker";
+
 
 
     // homopolymer compress fasta and save as new fasta
@@ -49,6 +51,8 @@ int main() {
 
     markerizer M;
     M.generate_markers(n_markers,marker_length, seed);
+    M.save_markers(marker_path);
+    M.load_markers(marker_path);
 
 //    std::vector<std::string> markers;
 //    markers.reserve(n_markers);

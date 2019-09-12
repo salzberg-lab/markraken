@@ -8,6 +8,10 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <cereal/archives/binary.hpp>
+#include <cereal/types/vector.hpp>
+#include <cereal/types/string.hpp>
+#include <fstream>
 
 class markerizer {
 public:

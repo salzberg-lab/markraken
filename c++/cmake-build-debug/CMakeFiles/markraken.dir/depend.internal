@@ -41,7 +41,9 @@ CMakeFiles/markraken.dir/main.cpp.o
  ../include/cereal/types/base_class.hpp
  ../include/cereal/types/common.hpp
  ../include/cereal/types/concepts/pair_associative_container.hpp
+ ../include/cereal/types/string.hpp
  ../include/cereal/types/unordered_map.hpp
+ ../include/cereal/types/vector.hpp
  /tmp/tmp.dY6zw5puj1/HPC.h
  /tmp/tmp.dY6zw5puj1/include/FastaTools.h
  /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h
@@ -49,5 +51,17 @@ CMakeFiles/markraken.dir/main.cpp.o
  /tmp/tmp.dY6zw5puj1/main.cpp
  /tmp/tmp.dY6zw5puj1/markerizer.h
 CMakeFiles/markraken.dir/markerizer.cpp.o
+ ../include/cereal/access.hpp
+ ../include/cereal/archives/binary.hpp
+ ../include/cereal/cereal.hpp
+ ../include/cereal/details/helpers.hpp
+ ../include/cereal/details/polymorphic_impl_fwd.hpp
+ ../include/cereal/details/static_object.hpp
+ ../include/cereal/details/traits.hpp
+ ../include/cereal/macros.hpp
+ ../include/cereal/types/base_class.hpp
+ ../include/cereal/types/common.hpp
+ ../include/cereal/types/string.hpp
+ ../include/cereal/types/vector.hpp
  /tmp/tmp.dY6zw5puj1/markerizer.cpp
  /tmp/tmp.dY6zw5puj1/markerizer.h

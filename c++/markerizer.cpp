@@ -47,3 +47,18 @@ std::string markerizer::reverse_complement(std::string seq) {
     }
     return revcomp;
 }
+
+void markerizer::save_markers(const std::string &filepath) {
+    std::ofstream f_out(filepath, std::ios::binary);
+    cereal::BinaryOutputArchive oarchive(f_out);
+    oarchive(markers);
+    f_out.close();
+}
+
+void markerizer::load_markers(const std::string &filepath) {
+    std::ifstream f_in(filepath, std::ios::binary);
+    cereal::BinaryInputArchive iarchive(f_in);
+    iarchive(markers);
+    f_in.close();
+    std::cout << markers[100] << std::endl;
+}
