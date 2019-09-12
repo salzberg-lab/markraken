@@ -211,7 +211,7 @@ void NcbiTaxonomy::loadNames(const std::string &namesFile) {
 
 // Euler traversal of tree
 void NcbiTaxonomy::elh(std::vector< std::vector<TaxID> > const & children, TaxID taxId, int level) {
-    assert (taxId > 0);
+    assert (taxId >= 0);
     int id = nodeId(taxId);
 
     if (H[id] == 0) {

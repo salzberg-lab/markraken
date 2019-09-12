@@ -173,6 +173,9 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dependencies for target
+cereal_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 markraken_BINARY_DIR:STATIC=/tmp/tmp.dY6zw5puj1/cmake-build-debug
 

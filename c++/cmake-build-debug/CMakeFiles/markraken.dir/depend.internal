@@ -14,10 +14,34 @@ CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o
  /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.cpp
  /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h
 CMakeFiles/markraken.dir/index.cpp.o
+ ../include/cereal/access.hpp
+ ../include/cereal/archives/binary.hpp
+ ../include/cereal/cereal.hpp
+ ../include/cereal/details/helpers.hpp
+ ../include/cereal/details/polymorphic_impl_fwd.hpp
+ ../include/cereal/details/static_object.hpp
+ ../include/cereal/details/traits.hpp
+ ../include/cereal/macros.hpp
+ ../include/cereal/types/base_class.hpp
+ ../include/cereal/types/common.hpp
+ ../include/cereal/types/concepts/pair_associative_container.hpp
+ ../include/cereal/types/unordered_map.hpp
  /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h
  /tmp/tmp.dY6zw5puj1/index.cpp
  /tmp/tmp.dY6zw5puj1/index.h
 CMakeFiles/markraken.dir/main.cpp.o
+ ../include/cereal/access.hpp
+ ../include/cereal/archives/binary.hpp
+ ../include/cereal/cereal.hpp
+ ../include/cereal/details/helpers.hpp
+ ../include/cereal/details/polymorphic_impl_fwd.hpp
+ ../include/cereal/details/static_object.hpp
+ ../include/cereal/details/traits.hpp
+ ../include/cereal/macros.hpp
+ ../include/cereal/types/base_class.hpp
+ ../include/cereal/types/common.hpp
+ ../include/cereal/types/concepts/pair_associative_container.hpp
+ ../include/cereal/types/unordered_map.hpp
  /tmp/tmp.dY6zw5puj1/HPC.h
  /tmp/tmp.dY6zw5puj1/include/FastaTools.h
  /tmp/tmp.dY6zw5puj1/include/NcbiTaxonomy.h

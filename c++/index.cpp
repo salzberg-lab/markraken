@@ -52,3 +52,17 @@ void index::read_taxonomy(const std::string &names_path, const std::string &node
 index::~index() {
     delete this->tax;
 }
+
+void index::save_index(const std::string &filepath) {
+    std::ofstream f_out(filepath, std::ios::binary);
+    cereal::BinaryOutputArchive oarchive(f_out);
+    oarchive(markmap);
+    f_out.close();
+}
+
+void index::load_index(const std::string &filepath) {
+    std::ifstream f_in(filepath, std::ios::binary);
+    cereal::BinaryInputArchive iarchive(f_in);
+    iarchive(markmap);
+    f_in.close();
+}
