@@ -4,22 +4,12 @@
 #include "include/NcbiTaxonomy.h"
 #include "index.h"
 #include "markerizer.h"
+#include <cereal/archives/binary.hpp>
+#include <cereal/types/vector.hpp>
+
 //#include "include/smhasher/MurmurHash3.h"
 //#include "include/kraken2/compact_hash.h"
 //#include <vector>
-
-std::string random_string( size_t length ){
-    // https://stackoverflow.com/questions/440133/how-do-i-create-a-random-alpha-numeric-string-in-c
-    auto randchar = []() -> char{
-        const char charset[] = "ATCG";
-        const size_t max_index = (sizeof(charset) - 1);
-        return charset[ rand() % max_index ];
-    };
-    std::string str(length,0);
-    std::generate_n( str.begin(), length, randchar );
-    return str;
-}
-
 
 int main() {
 //    std::string filepath_in = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/DB_small.fa";
@@ -28,7 +18,7 @@ int main() {
     std::string DB_HPC_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small.fa";
     std::string index_path = "/ccb/salz4-4/markus/markraken/data/compressed/index.markmap";
     std::string marker_path = "/ccb/salz4-4/markus/markraken/data/compressed/m.marker";
-
+    std::string markerized_seq_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small.markerized";
 
 
     // homopolymer compress fasta and save as new fasta
@@ -50,17 +40,30 @@ int main() {
     uint32_t seed = 2019;
 
     markerizer M;
-    M.generate_markers(n_markers,marker_length, seed);
-    M.save_markers(marker_path);
+//    M.generate_markers(n_markers,marker_length, seed);
+//    M.save_markers(marker_path);
     M.load_markers(marker_path);
-
-//    std::vector<std::string> markers;
-//    markers.reserve(n_markers);
-//    std::cout << random_string(marker_length) << std::endl;
-
 
     // extract all markers from the compressed sequence
     std::vector<std::vector<uint32_t>> marker_seqs;
+    std::vector<uint32_t> mseq;
+    for (int i=0; i<seqs.size(); i++){
+        if (i%100==0){
+            std::cout << i << std::endl;
+        }
+        mseq = M.markerize(seqs[i]);
+        marker_seqs.push_back(mseq);
+    }
+
+    // save markerized sequence
+    std::ofstream f_out(markerized_seq_path, std::ios::binary);
+    cereal::BinaryOutputArchive oarchive(f_out);
+    oarchive(marker_seqs);
+    f_out.close();
+
+//    for (int i=0; i<foo.size(); i++){
+//        std::cout << foo[i] << std::endl;
+//    }
 
 //    marker_seqs  =
 //    std::cout << seqs[0] << std::endl;

@@ -21,8 +21,9 @@ public:
     void save_markers(const std::string &filepath);
     void load_markers(const std::string &filepath);
 
-    std::vector<uint16_t> markerize(std::vector<std::string>);
+    std::vector<uint32_t> markerize(std::string);
 private:
+    int marker_length;
     std::vector<std::string> markers;
     std::string reverse_complement(std::string seq);
 };

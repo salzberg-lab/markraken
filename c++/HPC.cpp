@@ -73,8 +73,14 @@ void HPC::extract_miniseq_taxids() {
         if (id.at(0) == 'x'){
             id.erase(0, 1);
         }
-
-        TaxID id_num = std::stoi(id);
+        TaxID id_num;
+        try {
+            id_num = std::stoi(id);
+        }
+        catch (std::exception e) {
+            std::cout << id << std::endl; // THIS IS TEMPORARY TO DEAL WITH HUMAN BEING IN DIFFERENT FORMAT, FIX THIS IN FASTA READER
+            id_num = 9606;
+        }
         taxids.push_back(id_num);
     }
 }

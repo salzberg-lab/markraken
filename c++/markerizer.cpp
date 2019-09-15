@@ -8,6 +8,7 @@
 #include "markerizer.h"
 
 void markerizer::generate_markers(const uint32_t &n_markers, const uint32_t &marker_length, const uint32_t seed) {
+    this->marker_length = marker_length;
     // generates a set of ~n unique homopolymer compressed markers and their reverse complements
     std::set<std::string> markerset;
     char alphabet[] = "ATCG";
@@ -60,5 +61,24 @@ void markerizer::load_markers(const std::string &filepath) {
     cereal::BinaryInputArchive iarchive(f_in);
     iarchive(markers);
     f_in.close();
-    std::cout << markers[100] << std::endl;
+    this->marker_length = markers[0].size();
+}
+
+std::vector<uint32_t> markerizer::markerize(std::string nuc_seq) {
+    std::vector<uint32_t> marker_seq;
+    marker_seq.reserve(nuc_seq.size());
+    std::string subseq;
+    subseq.reserve(marker_length);
+
+    //https://stackoverflow.com/questions/19481662/c-index-of-element-in-sorted-stdvector
+    for (int i=0; i<nuc_seq.size()-marker_length; i++){
+        subseq = nuc_seq.substr(i, marker_length); // copying is not great, c++17 is required for good string viewing, probably better to use char*
+        auto lower = std::lower_bound(markers.begin(), markers.end(), subseq);
+        bool found = lower != markers.end() && *lower == subseq;
+        if (found){
+            auto idx = std::distance(markers.begin(), lower);
+            marker_seq.push_back(idx);
+        }
+    }
+    return marker_seq;
 }
