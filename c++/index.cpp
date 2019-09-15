@@ -34,7 +34,13 @@ void index::update(const uint32_t &singleint, const uint32_t &taxid) {
         std::vector<TaxID> taxids;
         taxids.push_back(taxid);
         taxids.push_back(taxid_present);
-        uint32_t ancestor = tax->LCA(taxids)->taxId;
+        uint32_t ancestor = 0;
+        if (tax->nodeExists(taxid) and tax->nodeExists(taxid_present)){
+            ancestor = tax->LCA(taxids)->taxId;
+        }
+//        else {
+//            std::cout << "No tax info for " << taxid  << " or " << taxid_present << std::endl;
+//        }
         inserter.first->second = ancestor;
     }
 }
