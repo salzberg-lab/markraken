@@ -17,68 +17,114 @@ int main() {
 //    std::string filepath_in = "/ccb/salz4-4/markus/genome_data/ecoli_MG1655/GCF_000005845.2_ASM584v2_genomic.fna";
     std::string DB_HPC_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small.fa";
     std::string index_path = "/ccb/salz4-4/markus/markraken/data/compressed/index.markmap";
-    std::string marker_path = "/ccb/salz4-4/markus/markraken/data/compressed/m.marker";
-    std::string markerized_seq_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small.markerized";
+    std::string marker_path = "/ccb/salz4-4/markus/markraken/data/compressed/mn1000.marker";
+    std::string markerized_seq_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small_ml10_mn_1000.markerized";
+    std::string taxid_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small_ml10_mn_1000.taxid";
+//    std::string markerized_seq_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small.markerized";
+//    std::string taxid_path = "/ccb/salz4-4/markus/markraken/data/compressed/DB_HPC_small_ml10_mn_1000.taxid";
 
-
-    // homopolymer compress fasta and save as new fasta
+//    // homopolymer compress fasta and save as new fasta
 //    HPC compressor;
 //    compressor.read(DB_path);
 //    compressor.compress();
 //    compressor.write(DB_HPC_path);
 
-    // read in HPC compressed seqs and extract taxids from miniseq format
-    HPC reader;
-    reader.read(DB_HPC_path);
-    reader.extract_miniseq_taxids();
-    std::vector<int> &taxids = reader.taxids;
-    std::vector<std::string> &seqs = reader.seqs;
 
-    // generate markers and save to file for all future use
-    uint32_t n_markers = 8000;
+//    // read in HPC compressed seqs and extract taxids from miniseq format
+//    HPC reader;
+//    reader.read(DB_HPC_path);
+//    reader.extract_miniseq_taxids();
+//    std::vector<int> &taxids = reader.taxids;
+//    std::vector<std::string> &seqs = reader.seqs;
+
+
+    // marker parameters
+    uint32_t n_markers = 1000;
     uint32_t marker_length = 10;
     uint32_t seed = 2019;
 
-    markerizer M;
+
+    // generate markers and markerize HPC sequence
+//    markerizer M;
 //    M.generate_markers(n_markers,marker_length, seed);
 //    M.save_markers(marker_path);
-    M.load_markers(marker_path);
+//    M.load_markers(marker_path);
 
-    // extract all markers from the compressed sequence
-    std::vector<std::vector<uint32_t>> marker_seqs;
-    std::vector<uint32_t> mseq;
-    for (int i=0; i<seqs.size(); i++){
-        if (i%100==0){
-            std::cout << i << std::endl;
-        }
-        mseq = M.markerize(seqs[i]);
-        marker_seqs.push_back(mseq);
-    }
 
-    // save markerized sequence
-    std::ofstream f_out(markerized_seq_path, std::ios::binary);
-    cereal::BinaryOutputArchive oarchive(f_out);
-    oarchive(marker_seqs);
-    f_out.close();
-
-//    for (int i=0; i<foo.size(); i++){
-//        std::cout << foo[i] << std::endl;
+//    // extract all markers from the compressed sequence
+//    std::vector<std::vector<uint32_t>> marker_seqs;
+//    std::vector<uint32_t> mseq;
+//    for (int i=0; i<seqs.size(); i++){
+//        if (i%100==0){
+//            std::cout << i << std::endl;
+//        }
+//        mseq = M.markerize(seqs[i]);
+//        marker_seqs.push_back(mseq);
 //    }
 
-//    marker_seqs  =
-//    std::cout << seqs[0] << std::endl;
+
+//    // save markerized sequence and taxids
+//    std::ofstream f_out(markerized_seq_path, std::ios::binary);
+//    cereal::BinaryOutputArchive oarchive(f_out);
+//    oarchive(marker_seqs);
+//    f_out.close();
+//
+//    std::ofstream f_out2(taxid_path, std::ios::binary);
+//    cereal::BinaryOutputArchive oarchive2(f_out2);
+//    oarchive2(marker_seqs);
+//    f_out2.close();
+
+    // load markerized sequence and taxids
+    std::vector<std::vector<uint32_t>> marker_seqs;
+
+    std::ifstream f_in(markerized_seq_path, std::ios::binary);
+    cereal::BinaryInputArchive iarchive(f_in);
+    iarchive(marker_seqs);
+    f_in.close();
+
+    std::vector<int> taxids;
+    std::ifstream f_in2(taxid_path, std::ios::binary);
+    cereal::BinaryInputArchive iarchive2(f_in2);
+    iarchive2(taxids);
+    f_in2.close();
+
+//    for (int i=0; i<marker_seqs.size(); i++){
+//        for (int j=0; j<marker_seqs[i].size();j++){
+//            std::cout << marker_seqs[i][j] << std::endl;
+//        }
+//    }
 
 
-//    // load taxonomy for LCA calculation
+    // load taxonomy for LCA calculation
 //    std::string names_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/names.dmp";
 //    std::string nodes_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/nodes.dmp";
 //    std::string merged_path = "/ccb/salz4-4/markus/markraken/data/databases/miniSeq+H/taxonomy/merged.dmp";
-////    std::string names_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/names.dmp";
-////    std::string nodes_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/nodes.dmp";
-////    std::string merged_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/merged.dmp";
+    std::string names_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/names.dmp";
+    std::string nodes_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/nodes.dmp";
+    std::string merged_path = "/ccb/salz4-4/markus/markraken/data/ncbi_taxonomy/merged.dmp";
 //
-//
-//
+
+    // marKmer parameters
+    int marK = 3; // length of marKmers, like k for kmers
+
+    // build index from marKmers
+    class index marker_index;
+    marker_index.read_taxonomy(names_path, nodes_path, merged_path);
+
+    for (int i=0; i<marker_seqs.size(); i++){
+        std::vector<uint32_t> &singleseq = marker_seqs[i];
+        TaxID id = taxids[i];
+        for (int j=0; j<singleseq.size()-marK; j++){
+            std::vector<uint32_t> marker(&singleseq[j], &singleseq[j+marK]); // TODO do this without copying data
+            marker_index.add_pair(marker, TaxID(id));
+        }
+    }
+
+
+
+
+
+
 //    // build index example
 //    class index marker_index;
 //    marker_index.read_taxonomy(names_path, nodes_path, merged_path);
