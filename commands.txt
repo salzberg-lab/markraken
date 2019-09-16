@@ -1,0 +1,1 @@
+ncbi-genome-download --section refseq --assembly-level complete --format fasta,genbank --human-readable bacteria
