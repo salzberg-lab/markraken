@@ -28,9 +28,11 @@ public:
     void load_index(const std::string &filepath);
 
     uint32_t predict_taxid(const std::vector<uint32_t> &markers);
+
+    std::unordered_map<uint32_t, uint32_t> markmap;
+
 private:
     NcbiTaxonomy * tax;
-    std::unordered_map<uint32_t, uint32_t> markmap;
     void update(const uint32_t &singleint, const uint32_t &taxid);
     uint32_t combine(std::vector<uint32_t> const &vec);
 };

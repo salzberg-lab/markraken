@@ -8,8 +8,10 @@ uint32_t index::combine(std::vector<uint32_t> const &vec) {
     //https://en.wikipedia.org/wiki/Tiny_Encryption_Algorithm
     //https://github.com/HowardHinnant/hash_append/issues/7
     std::size_t seed = vec.size();
-    for(auto& i : vec) {
-        seed ^= i + 0x9E3779B9 + (seed << 6) + (seed >> 2);
+    for (int i=0; i<30; i++) {
+        for (auto &i : vec) {
+            seed ^= i + 0x9E3779B9 + (seed << 6) + (seed >> 2);
+        }
     }
     return seed;
 }
@@ -17,6 +19,7 @@ uint32_t index::combine(std::vector<uint32_t> const &vec) {
 void index::add_pair(const std::vector<uint32_t> &markers, const uint32_t &taxid) {
     const uint32_t singleint = combine(markers);
     update(singleint, taxid);
+//    std::cout << singleint << " " << taxid << std::endl;
 }
 
 void index::reserve_space(int n_markmers) {
@@ -48,6 +51,8 @@ void index::update(const uint32_t &singleint, const uint32_t &taxid) {
 uint32_t index::predict_taxid(const std::vector<uint32_t> &markers) {
     const uint32_t singleint = combine(markers);
     uint32_t t_p = markmap[singleint];
+//    std::cout << singleint << "\t" << t_p << std::endl;
+
     return t_p;
 }
 
@@ -67,6 +72,7 @@ void index::save_index(const std::string &filepath) {
 }
 
 void index::load_index(const std::string &filepath) {
+//    markmap.reserve(2e9);
     std::ifstream f_in(filepath, std::ios::binary);
     cereal::BinaryInputArchive iarchive(f_in);
     iarchive(markmap);

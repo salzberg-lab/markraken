@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG    CMakeFiles/markraken.dir/main.cpp.o CMakeFiles/markraken.dir/HPC.cpp.o CMakeFiles/markraken.dir/include/FastaTools.cpp.o CMakeFiles/markraken.dir/include/NcbiTaxonomy.cpp.o CMakeFiles/markraken.dir/markerizer.cpp.o CMakeFiles/markraken.dir/index.cpp.o  -o markraken -rdynamic 

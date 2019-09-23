@@ -27,11 +27,12 @@ public:
     void extract_miniseq_taxids();
     std::vector<TaxID> taxids;
     std::vector <std::string> seqs;
+    std::vector <std::string> seqs_compressed;
+
 
 
 private:
     std::vector <std::string> infolines;
-    std::vector <std::string> seqs_compressed;
     int n_seqs;
 
     void homopolymer_compress(const std::string &s, std::string &s_compressed);
